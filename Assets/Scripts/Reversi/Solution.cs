@@ -92,6 +92,7 @@ public class ReversiBoard
                     }
                 }
 
+        //Debug.Log("Best value: " + bestValue + " at [" + bestX + ", " + bestY + "]");
         return IndexToMoveNotation(bestX, bestY);
     }
 
@@ -221,5 +222,42 @@ X O O X O X X
 . . . . . . . ";
         string result4 = Solution.PlaceToken(board4);
         Debug.Log("board 4: " + result4 + " and should be D6");
+        
+        
+        string board5 = @"5 6
+. . . . . 
+. . . O . 
+O X O O O 
+X O O O X 
+X O O . X 
+. . . . . ";
+        string result5 = Solution.PlaceToken(board5);
+        Debug.Log("board 5: " + result5 + " and should be E1");
+        
+        string board6 = @"9 6
+. . . . . . . . . 
+. . . . . . O . . 
+. . O O X O X X X 
+. . O X X X O X O 
+. . X O . O . X O 
+. . . . . X O O . ";
+        Debug.Log("board 6: " + Solution.PlaceToken(board6) + " and should be I6");
+        
+        string board7 = @"11 3
+. . . . . . . . . . . 
+. X . O O O O O . X . 
+. . . . X . . . . . . ";
+        Debug.Log("board 7: " + Solution.PlaceToken(board7) + " and should be C1");
+        
+        string board8 = @"8 8
+. . . . . . . . 
+. . O . O . . . 
+. . . . . . . . 
+. O O . X . O . 
+. . . . . . . . 
+. O . . . . . . 
+. . . . O . . . 
+. . . . . . . . ";
+        Debug.Log("board 8: " + Solution.PlaceToken(board8) + " and should be Anywhere but probably A1");
     }
 }
